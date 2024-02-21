@@ -1,1 +1,116 @@
 Pasta para guardar exercícios de fixação da matéria de desenvolvimento mobile :)
+
+
+LISTA 1 - CÓDIGO:
+
+package Exercicios
+
+import kotlin.math.round
+
+fun Exercicio1() {
+    println("EXERCÍCIO 1: Restante da Ração!")
+
+    println("Digite o peso total da ração:")
+    val racao = readln().toFloat()
+
+    println("Digite (em gramas) o quanto dará de ração aos gatos:")
+    val gato1 = readln().toFloat()
+
+    val gato2 = gato1
+
+    println("Digite por quantos dias você já deu ração:")
+    val dias = readln().toInt()
+
+    val resultado = (racao - ((gato1 + gato2) * dias))
+    if (resultado > 0) {
+        println("O restante após $dias dias é: $resultado")
+    } else {
+        println("A ração acabou :(")
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+fun Exercicio2() {
+    println("EXERCÍCIO 2: Espetáculo Teatral!")
+
+    println("Digite o custo total do espetáculo:")
+    val espet = readln().toFloat()
+
+    println("Digite o valor unitário dos ingressos:")
+    val ingresso = readln().toFloat()
+
+    val resultado = espet/ingresso
+
+    println("Devem ser vendidos, no mínimo ${round(resultado)} ingressos!")
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+fun Exercicio3() {
+    println("EXERCÍCIO 3: Juliana e Contas Atrasadas!")
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+fun Exercicio4() {
+    println("EXERCÍCIO 4: Crédito para Servidores Federais!")
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+fun Exercicio5() {
+    println("EXERCÍCIO 5: Valor de Carro!")
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+fun Exercicio6() {
+    println("EXERCÍCIO 6: Compra com Condicionais!")
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+fun Exercicio7() {
+    println("EXERCÍCIO 7: Números Primos!")
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+fun Exercicio8() {
+    println("EXERCÍCIO 8: Número positivo e Fatorial!")
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+fun main() {
+
+    //Executanto todos os exercícios da lista, em ordem:
+    println("Digite uma opção:\n\n" +
+            "[1] - Exercicio 1\n" +
+            "[2] - Exercicio 2\n" +
+            "[3] - Exercicio 3\n" +
+            "[4] - Exercicio 4\n" +
+            "[5] - Exercicio 5\n" +
+            "[6] - Exercicio 6\n" +
+            "[7] - Exercicio 7\n" +
+            "[8] - Exercicio 8\n\n" +
+            "[0] - Fechar Programa\n\n\n")
+
+    val opcao: Int = readln().toInt()
+
+    when (opcao){
+        1 -> Exercicio1()
+        2 -> Exercicio2()
+        3 -> Exercicio3()
+        4 -> Exercicio4()
+        5 -> Exercicio5()
+        6 -> Exercicio6()
+        7 -> Exercicio7()
+        8 -> Exercicio8()
+        0 -> println("Programa fechando...")
+    }
+
+}
+
